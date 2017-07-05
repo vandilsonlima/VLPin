@@ -1,15 +1,18 @@
 # VLPin
 
-[![CI Status](http://img.shields.io/travis/vandilsonlima/VLPin.svg?style=flat)](https://travis-ci.org/vandilsonlima/VLPin)
 [![Version](https://img.shields.io/cocoapods/v/VLPin.svg?style=flat)](http://cocoapods.org/pods/VLPin)
 [![License](https://img.shields.io/cocoapods/l/VLPin.svg?style=flat)](http://cocoapods.org/pods/VLPin)
 [![Platform](https://img.shields.io/cocoapods/p/VLPin.svg?style=flat)](http://cocoapods.org/pods/VLPin)
 
+An easy way to deal with Auto Layout programmatically and avoid the mess of Storyboard and xib files.
+VLPin is an extension which adds methods in `UIView` and is built on top of the `NSLayoutAnchor` API.
+
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
+To pin `view` on top of `containerView`.
+```swift
+view.pin(on: .top(10), of: containerView)
+```
 
 ## Installation
 
