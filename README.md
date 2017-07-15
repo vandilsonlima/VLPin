@@ -4,14 +4,15 @@
 [![License](https://img.shields.io/cocoapods/l/VLPin.svg?style=flat)](http://cocoapods.org/pods/VLPin)
 [![Platform](https://img.shields.io/cocoapods/p/VLPin.svg?style=flat)](http://cocoapods.org/pods/VLPin)
 
-An easy way to deal with Auto Layout programmatically and avoid the mess of Storyboard and xib files.
+An way to reduce the amount of code required to create Auto Layout programmatically.
+
 VLPin is an extension which adds methods in `UIView` and is built on top of the `NSLayoutAnchor` API.
 
 ## Example
 
-To pin `view` on top of `containerView`.
+To center `view` on `containerView`.
 ```swift
-view.pin(on: .top(10), of: containerView)
+view.makeCenter(equalTo: containerView)
 ```
 
 ## Installation
