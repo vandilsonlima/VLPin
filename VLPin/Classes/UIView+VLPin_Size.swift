@@ -6,10 +6,10 @@
 //
 import UIKit
 
-extension UIView {
+public extension UIView {
     
     @discardableResult
-    public func pinWidth(equalTo width: CGFloat,
+    public func makeWidth(equalTo width: CGFloat,
                           withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
         let constraint = widthAnchor.constraint(equalToConstant: width)
@@ -19,14 +19,14 @@ extension UIView {
     }
     
     @discardableResult
-    public func pinWidth(equalTo view: UIView, multiplier: CGFloat = 1,
+    public func makeWidth(equalTo view: UIView, multiplier: CGFloat = 1,
                          withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         let constraint = widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: multiplier)
-        return pin(view: view, constraint: constraint, priority: priority)
+        return make(view: view, constraint: constraint, priority: priority)
     }
     
     @discardableResult
-    public func pinHeight(equalTo height: CGFloat,
+    public func makeHeight(equalTo height: CGFloat,
                           withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
         let constraint = heightAnchor.constraint(equalToConstant: height)
@@ -36,9 +36,9 @@ extension UIView {
     }
     
     @discardableResult
-    public func pinHeight(equalTo view: UIView, multiplier: CGFloat = 1,
+    public func makeHeight(equalTo view: UIView, multiplier: CGFloat = 1,
                           withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         let constraint = heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: multiplier)
-        return pin(view: view, constraint: constraint, priority: priority)
+        return make(view: view, constraint: constraint, priority: priority)
     }
 }

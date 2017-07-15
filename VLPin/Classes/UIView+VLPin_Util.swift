@@ -9,7 +9,7 @@ import UIKit
 
 extension UIView {
     
-    func pin(view: UIView, constraint: NSLayoutConstraint,
+    func make(view: UIView, constraint: NSLayoutConstraint,
              priority: UILayoutPriority) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
         view.translatesAutoresizingMaskIntoConstraints = false

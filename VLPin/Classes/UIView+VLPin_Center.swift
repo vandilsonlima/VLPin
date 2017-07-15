@@ -12,21 +12,21 @@ public typealias CenterConstraints = (x: NSLayoutConstraint, y: NSLayoutConstrai
 public extension UIView {
     
     @discardableResult
-    public func pinCenterX(equalTo view: UIView, constant: CGFloat = 0,
+    public func makeCenterX(equalTo view: UIView, constant: CGFloat = 0,
                            withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         let constraint = centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: constant)
-        return pin(view: view, constraint: constraint, priority: priority)
+        return make(view: view, constraint: constraint, priority: priority)
     }
     
     @discardableResult
-    public func pinCenterY(equalTo view: UIView, constant: CGFloat = 0,
+    public func makeCenterY(equalTo view: UIView, constant: CGFloat = 0,
                            withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         let constraint = centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: constant)
-        return view.pin(view: view, constraint: constraint, priority: priority)
+        return view.make(view: view, constraint: constraint, priority: priority)
     }
     
     @discardableResult
-    public func pinCenter(equalTo view: UIView) -> CenterConstraints {
-        return (pinCenterX(equalTo: view), pinCenterY(equalTo: view))
+    public func makeCenter(equalTo view: UIView) -> CenterConstraints {
+        return (makeCenterX(equalTo: view), makeCenterY(equalTo: view))
     }
 }

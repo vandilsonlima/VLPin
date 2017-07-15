@@ -24,7 +24,7 @@ public typealias Margins = (top: CGFloat, leading: CGFloat, bottom: CGFloat, tra
 public extension UIView {
     
     @discardableResult
-    public func pinTop(at yEdge: YEdge, of view: UIView,
+    public func makeTop(equalTo yEdge: YEdge, of view: UIView,
                         withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch yEdge {
@@ -33,11 +33,11 @@ public extension UIView {
         case .bottom(let value):
             constraint = topAnchor.constraint(equalTo: view.bottomAnchor, constant: value)
         }
-        return pin(view: view, constraint: constraint, priority: priority)
+        return make(view: view, constraint: constraint, priority: priority)
     }
     
     @discardableResult
-    public func pinBottom(at yEdge: YEdge, of view: UIView,
+    public func makeBottom(equalTo yEdge: YEdge, of view: UIView,
                        withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch yEdge {
@@ -46,11 +46,11 @@ public extension UIView {
         case .bottom(let value):
             constraint = bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: value)
         }
-        return pin(view: view, constraint: constraint, priority: priority)
+        return make(view: view, constraint: constraint, priority: priority)
     }
     
     @discardableResult
-    public func pinLeading(at xEdge: XEdge, of view: UIView,
+    public func makeLeading(equalTo xEdge: XEdge, of view: UIView,
                           withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch xEdge {
@@ -59,11 +59,11 @@ public extension UIView {
         case .trailing(let value):
             constraint = leadingAnchor.constraint(equalTo: view.trailingAnchor, constant: value)
         }
-        return pin(view: view, constraint: constraint, priority: priority)
+        return make(view: view, constraint: constraint, priority: priority)
     }
     
     @discardableResult
-    public func pinTrailing(at xEdge: XEdge, of view: UIView,
+    public func makeTrailing(equalTo xEdge: XEdge, of view: UIView,
                            withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch xEdge {
@@ -72,17 +72,17 @@ public extension UIView {
         case .trailing(let value):
             constraint = trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: value)
         }
-        return pin(view: view, constraint: constraint, priority: priority)
+        return make(view: view, constraint: constraint, priority: priority)
     }
     
     @discardableResult
-    public func pinAtEdges(of view: UIView,
+    public func makeEdges(equalTo view: UIView,
                            withMargins margins: Margins = (0, 0, 0, 0)) -> EdgeConstraints {
         return (
-            pinTop(at: .top(margins.top), of: view),
-            pinLeading(at: .leading(margins.leading), of: view),
-            pinBottom(at: .bottom(margins.bottom), of: view),
-            pinTrailing(at: .trailing(margins.trailing), of: view)
+            makeTop(equalTo: .top(margins.top), of: view),
+            makeLeading(equalTo: .leading(margins.leading), of: view),
+            makeBottom(equalTo: .bottom(margins.bottom), of: view),
+            makeTrailing(equalTo: .trailing(margins.trailing), of: view)
         )
     }
 }
@@ -90,7 +90,7 @@ public extension UIView {
 extension UIView {
     
     @discardableResult
-    public func pinTrailing(greaterThanOrEqualTo xEdge: XEdge, of view: UIView,
+    public func makeTrailing(greaterThanOrEqualTo xEdge: XEdge, of view: UIView,
                             withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch xEdge {
@@ -99,11 +99,11 @@ extension UIView {
         case .trailing(let value):
             constraint = trailingAnchor.constraint(greaterThanOrEqualTo: view.trailingAnchor, constant: value)
         }
-        return pin(view: view, constraint: constraint, priority: priority)
+        return make(view: view, constraint: constraint, priority: priority)
     }
     
     @discardableResult
-    public func pinLeading(greaterThanOrEqualTo xEdge: XEdge, of view: UIView,
+    public func makeLeading(greaterThanOrEqualTo xEdge: XEdge, of view: UIView,
                             withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch xEdge {
@@ -112,11 +112,11 @@ extension UIView {
         case .trailing(let value):
             constraint = leadingAnchor.constraint(greaterThanOrEqualTo: view.trailingAnchor, constant: value)
         }
-        return pin(view: view, constraint: constraint, priority: priority)
+        return make(view: view, constraint: constraint, priority: priority)
     }
     
     @discardableResult
-    public func pinTop(greaterThanOrEqualTo yEdge: YEdge, of view: UIView,
+    public func makeTop(greaterThanOrEqualTo yEdge: YEdge, of view: UIView,
                        withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch yEdge {
@@ -125,11 +125,11 @@ extension UIView {
         case .bottom(let value):
             constraint = topAnchor.constraint(greaterThanOrEqualTo: view.bottomAnchor, constant: value)
         }
-        return pin(view: view, constraint: constraint, priority: priority)
+        return make(view: view, constraint: constraint, priority: priority)
     }
     
     @discardableResult
-    public func pinBottom(greaterThanOrEqualTo yEdge: YEdge, of view: UIView,
+    public func makeBottom(greaterThanOrEqualTo yEdge: YEdge, of view: UIView,
                        withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch yEdge {
@@ -138,14 +138,14 @@ extension UIView {
         case .bottom(let value):
             constraint = bottomAnchor.constraint(greaterThanOrEqualTo: view.bottomAnchor, constant: value)
         }
-        return pin(view: view, constraint: constraint, priority: priority)
+        return make(view: view, constraint: constraint, priority: priority)
     }
 }
 
 extension UIView {
     
     @discardableResult
-    public func pinTrailing(lessThanOrEqualTo xEdge: XEdge, of view: UIView,
+    public func makeTrailing(lessThanOrEqualTo xEdge: XEdge, of view: UIView,
                             withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch xEdge {
@@ -154,11 +154,11 @@ extension UIView {
         case .trailing(let value):
             constraint = trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: value)
         }
-        return pin(view: view, constraint: constraint, priority: priority)
+        return make(view: view, constraint: constraint, priority: priority)
     }
     
     @discardableResult
-    public func pinLeading(lessThanOrEqualTo xEdge: XEdge, of view: UIView,
+    public func makeLeading(lessThanOrEqualTo xEdge: XEdge, of view: UIView,
                            withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch xEdge {
@@ -167,11 +167,11 @@ extension UIView {
         case .trailing(let value):
             constraint = leadingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: value)
         }
-        return pin(view: view, constraint: constraint, priority: priority)
+        return make(view: view, constraint: constraint, priority: priority)
     }
     
     @discardableResult
-    public func pinTop(lessThanOrEqualTo yEdge: YEdge, of view: UIView,
+    public func makeTop(lessThanOrEqualTo yEdge: YEdge, of view: UIView,
                        withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch yEdge {
@@ -180,11 +180,11 @@ extension UIView {
         case .bottom(let value):
             constraint = topAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor, constant: value)
         }
-        return pin(view: view, constraint: constraint, priority: priority)
+        return make(view: view, constraint: constraint, priority: priority)
     }
     
     @discardableResult
-    public func pinBottom(lessThanOrEqualTo yEdge: YEdge, of view: UIView,
+    public func makeBottom(lessThanOrEqualTo yEdge: YEdge, of view: UIView,
                           withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch yEdge {
@@ -193,6 +193,6 @@ extension UIView {
         case .bottom(let value):
             constraint = bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor, constant: value)
         }
-        return pin(view: view, constraint: constraint, priority: priority)
+        return make(view: view, constraint: constraint, priority: priority)
     }
 }

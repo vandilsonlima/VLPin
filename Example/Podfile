@@ -6,7 +6,5 @@ target 'VLPin_Example' do
 
   target 'VLPin_Tests' do
     inherit! :search_paths
-
-    
   end
 end
