@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'VLPin'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'An easy way to programmatically deal with Auto Layout'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-An easy way to programmatically create constraints without the mess of Storyboard and Xib files
+An way to reduce the amount of code required to create Auto Layout programmatically
                        DESC
 
   s.homepage         = 'https://github.com/vandilsonlima/VLPin'
@@ -31,7 +31,7 @@ An easy way to programmatically create constraints without the mess of Storyboar
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'VLPin/Classes/**/*'
-  
+
   # s.resource_bundles = {
   #   'VLPin' => ['VLPin/Assets/*.png']
   # }
