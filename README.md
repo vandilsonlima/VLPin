@@ -21,7 +21,7 @@ VLPin is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "VLPin"
+pod 'VLPin', :git => 'https://github.com/vandilsonlima/VLPin.git', :branch => 'swift4'
 ```
 
 ## Author
