@@ -13,14 +13,14 @@ public extension UIView {
     
     @discardableResult
     public func makeCenterX(equalTo view: UIView, constant: CGFloat = 0,
-                           withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
+                            withPriority priority: UILayoutPriority = UILayoutPriority.required) -> NSLayoutConstraint {
         let constraint = centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: constant)
         return make(view: view, constraint: constraint, priority: priority)
     }
     
     @discardableResult
     public func makeCenterY(equalTo view: UIView, constant: CGFloat = 0,
-                           withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
+                            withPriority priority: UILayoutPriority = UILayoutPriority.required) -> NSLayoutConstraint {
         let constraint = centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: constant)
         return view.make(view: view, constraint: constraint, priority: priority)
     }

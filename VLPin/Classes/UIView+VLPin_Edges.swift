@@ -25,7 +25,7 @@ public extension UIView {
     
     @discardableResult
     public func makeTop(equalTo yEdge: YEdge, of view: UIView,
-                        withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
+                        withPriority priority: UILayoutPriority = UILayoutPriority.required) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch yEdge {
         case .top(let value):
@@ -38,7 +38,7 @@ public extension UIView {
     
     @discardableResult
     public func makeBottom(equalTo yEdge: YEdge, of view: UIView,
-                       withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
+                           withPriority priority: UILayoutPriority = UILayoutPriority.required) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch yEdge {
         case .top(let value):
@@ -51,7 +51,7 @@ public extension UIView {
     
     @discardableResult
     public func makeLeading(equalTo xEdge: XEdge, of view: UIView,
-                          withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
+                            withPriority priority: UILayoutPriority = UILayoutPriority.required) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch xEdge {
         case .leading(let value):
@@ -64,7 +64,7 @@ public extension UIView {
     
     @discardableResult
     public func makeTrailing(equalTo xEdge: XEdge, of view: UIView,
-                           withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
+                             withPriority priority: UILayoutPriority = UILayoutPriority.required) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch xEdge {
         case .leading(let value):
@@ -91,7 +91,7 @@ extension UIView {
     
     @discardableResult
     public func makeTrailing(greaterThanOrEqualTo xEdge: XEdge, of view: UIView,
-                            withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
+                             withPriority priority: UILayoutPriority = UILayoutPriority.required) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch xEdge {
         case .leading(let value):
@@ -104,7 +104,7 @@ extension UIView {
     
     @discardableResult
     public func makeLeading(greaterThanOrEqualTo xEdge: XEdge, of view: UIView,
-                            withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
+                            withPriority priority: UILayoutPriority = UILayoutPriority.required) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch xEdge {
         case .leading(let value):
@@ -117,7 +117,7 @@ extension UIView {
     
     @discardableResult
     public func makeTop(greaterThanOrEqualTo yEdge: YEdge, of view: UIView,
-                       withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
+                        withPriority priority: UILayoutPriority = UILayoutPriority.required) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch yEdge {
         case .top(let value):
@@ -130,7 +130,7 @@ extension UIView {
     
     @discardableResult
     public func makeBottom(greaterThanOrEqualTo yEdge: YEdge, of view: UIView,
-                       withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
+                           withPriority priority: UILayoutPriority = UILayoutPriority.required) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch yEdge {
         case .top(let value):
@@ -146,7 +146,7 @@ extension UIView {
     
     @discardableResult
     public func makeTrailing(lessThanOrEqualTo xEdge: XEdge, of view: UIView,
-                            withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
+                             withPriority priority: UILayoutPriority = UILayoutPriority.required) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch xEdge {
         case .leading(let value):
@@ -159,7 +159,7 @@ extension UIView {
     
     @discardableResult
     public func makeLeading(lessThanOrEqualTo xEdge: XEdge, of view: UIView,
-                           withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
+                            withPriority priority: UILayoutPriority = UILayoutPriority.required) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch xEdge {
         case .leading(let value):
@@ -172,7 +172,7 @@ extension UIView {
     
     @discardableResult
     public func makeTop(lessThanOrEqualTo yEdge: YEdge, of view: UIView,
-                       withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
+                        withPriority priority: UILayoutPriority = UILayoutPriority.required) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch yEdge {
         case .top(let value):
@@ -185,7 +185,7 @@ extension UIView {
     
     @discardableResult
     public func makeBottom(lessThanOrEqualTo yEdge: YEdge, of view: UIView,
-                          withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
+                           withPriority priority: UILayoutPriority = UILayoutPriority.required) -> NSLayoutConstraint {
         let constraint: NSLayoutConstraint!
         switch yEdge {
         case .top(let value):

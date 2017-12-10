@@ -1,16 +1,16 @@
 PODS:
-  - VLPin (0.1.0)
+  - VLPin (0.2.0)
 
 DEPENDENCIES:
   - VLPin (from `../`)
 
 EXTERNAL SOURCES:
   VLPin:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
-  VLPin: 1f7fc5622f401bac845eaa67b14676ed95dff22a
+  VLPin: c5e5bf5e993a03732fd40c903ce4ae987c9e0c91
 
 PODFILE CHECKSUM: 705efa3ae4a07fd1bdbddd24733cb944aa680f37
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1

@@ -10,7 +10,7 @@ public extension UIView {
     
     @discardableResult
     public func makeWidth(equalTo width: CGFloat,
-                          withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
+                          withPriority priority: UILayoutPriority = UILayoutPriority.required) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
         let constraint = widthAnchor.constraint(equalToConstant: width)
         constraint.priority = priority
@@ -20,14 +20,14 @@ public extension UIView {
     
     @discardableResult
     public func makeWidth(equalTo view: UIView, multiplier: CGFloat = 1,
-                         withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
+                          withPriority priority: UILayoutPriority = UILayoutPriority.required) -> NSLayoutConstraint {
         let constraint = widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: multiplier)
         return make(view: view, constraint: constraint, priority: priority)
     }
     
     @discardableResult
     public func makeHeight(equalTo height: CGFloat,
-                          withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
+                           withPriority priority: UILayoutPriority = UILayoutPriority.required) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
         let constraint = heightAnchor.constraint(equalToConstant: height)
         constraint.priority = priority
@@ -37,7 +37,7 @@ public extension UIView {
     
     @discardableResult
     public func makeHeight(equalTo view: UIView, multiplier: CGFloat = 1,
-                          withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
+                           withPriority priority: UILayoutPriority = UILayoutPriority.required) -> NSLayoutConstraint {
         let constraint = heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: multiplier)
         return make(view: view, constraint: constraint, priority: priority)
     }
